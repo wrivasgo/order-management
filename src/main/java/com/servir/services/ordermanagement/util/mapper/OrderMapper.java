@@ -19,8 +19,6 @@ import com.servir.services.ordermanagement.util.constants.StatusEnum;
 imports = {Date.class, SimpleDateFormat.class, Constants.class, StatusEnum.class})
 public interface OrderMapper {
 	
-	double cantidad = 6;
-	
 	@Mapping(target = "date", expression = "java(new Date())")
 	@Mapping(target = "status", expression = "java(StatusEnum.PENDING.getDescription())")
 	Order orderRequestToOrder(OrderRequest orderRequest);
